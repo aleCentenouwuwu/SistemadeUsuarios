@@ -31,15 +31,7 @@ namespace SistemadeUsuarios
             return false;
         }
 
-        public bool CerrarSesion()
-        {
-            if (usuarioActual != null)
-            {
-                usuarioActual = null;
-                return true;
-            }
-            return false;
-        }
+       
 
         public bool CrearCuenta(string correo, string contraseña)
         {
@@ -65,7 +57,10 @@ namespace SistemadeUsuarios
             }
 
             usuarios.Add(new Usuario(correo, contraseña));
+            Console.Clear();
             Console.WriteLine("Cuenta creada exitosamente.");
+            Console.ReadKey();
+
             return true;
         }
 
@@ -102,6 +97,14 @@ namespace SistemadeUsuarios
 
             }
         }
-
+        public bool CerrarSesion()
+        {
+            if (usuarioActual != null)
+            {
+                usuarioActual = null;
+                return true;
+            }
+            return false;
+        }
     }
 }

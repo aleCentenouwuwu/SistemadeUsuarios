@@ -102,18 +102,12 @@ namespace SistemadeUsuarios
                 switch (opcion)
                 {
                     case "1":
-                        if (sistema.CerrarSesion())
-                        {
+
                             Console.Clear();
                             Console.WriteLine("Sesión cerrada exitosamente.");
                             cerrarSesion = true;
                             Console.ReadKey();
-                        }
-                        else
-                        {
-                            Console.Clear();
-                            Console.WriteLine("No hay ninguna sesión iniciada.");
-                        }
+                       
                         break;
                     case "2":
                         Console.Clear();
